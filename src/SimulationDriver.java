@@ -1,6 +1,7 @@
 public class SimulationDriver{
 
     public static void main(String[] args){
-        System.out.println("Simulation Driver");
+        iVoteService student = new iVoteService();
+        iVoteService.numberOfStudents();
     }
 }
