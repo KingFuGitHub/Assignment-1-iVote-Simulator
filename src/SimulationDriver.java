@@ -6,7 +6,7 @@ public class SimulationDriver{
         // Student testStudent = new Student();
         for(int i = 0; i<1000; i++){
             // iVoteService.numberOfStudents();
-            System.out.println(Student.StudentUUID());
+            System.out.println(Student.generateStudentUUID());
         }
     }
 }

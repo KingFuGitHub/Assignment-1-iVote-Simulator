@@ -12,7 +12,7 @@ public class Student {
         return randomNumberOfStudents;
     }
 
-    public static String StudentUUID(){
+    public static String generateStudentUUID(){
         String uniqueID = UUID.randomUUID().toString();
 
         return uniqueID;
