@@ -1,13 +1,22 @@
+import java.util.Random;
+import java.util.UUID;
 
 public class Student {
 
-    public int min = 1;
-    public int max = 5;
+    public static int numberOfStudents() {
 
-    public static int numberOfStudents(int min, int max){
-        
-        int random = (int)Math.floor(Math.random()*(max-min+1)+min);
-        
-        return random;
+        Random random = new Random();
+
+        // the bound is not inclusive
+        int randomNumberOfStudents = random.nextInt(5) + 1;
+        return randomNumberOfStudents;
     }
+
+    public static String StudentUUID(){
+        String uniqueID = UUID.randomUUID().toString();
+
+        return uniqueID;
+    }
+
+    
 }
