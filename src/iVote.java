@@ -1,8 +1,7 @@
-public class iVote {
+import java.util.HashMap;
 
-    public static int numberOfStudents() {
-        Student student = new Student();
-        // return Student.numberOfStudents(student.min, student.max);
-        return Student.numberOfStudents();
+public class iVote {
+    public static HashMap<String,String> studentData() {
+        return Student.generateStudentData();
     }
 }
