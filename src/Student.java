@@ -1,31 +1,34 @@
-import java.util.Random;
 import java.util.UUID;
-import java.util.HashMap;
+import java.util.Random;
 
 public class Student {  
 
-    private static String generateStudentUUID(){
-        String uniqueID = UUID.randomUUID().toString();
-        return uniqueID;
+    // variables
+    private String ID;
+    private char answer;
+
+    // to generate unique IDs for a student
+    // Furthermore, there is no need to check when student submit because it's unique and can't submit twice.
+    public void generateID(){
+        this.ID = UUID.randomUUID().toString();
     }
 
+    // to get ID from a student
+    public String getID(){
+        return this.ID;
+    }
 
-    public static HashMap<String, String> generateStudentData(){
+    // to generate a random answer from A to D
+    public void generateAnswer(){
         Random random = new Random();
-        HashMap<String, String> student = new HashMap<String, String>();
-        String names[] = {"Bob", "Long", "Alex"};
-
-        int randomNumberOfStudents = random.nextInt(5) + 1;
-
-        for(int i = randomNumberOfStudents; i <= 5; i++){
-            student.put(generateStudentUUID(), names[random.nextInt(2)]);
-        }
-
-        return student;
+        // bound is 0 through 4 not including 5
+        answer = (char)(random.nextInt(4) + 65);
     }
 
-    
-
+    // to get the answer
+    public char getAnswer(){
+        return this.answer;
+    }
 
     
 }
